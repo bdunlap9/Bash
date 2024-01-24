@@ -7,7 +7,7 @@ function check_all_ports {
         elif nc -zv -w1 "$host" "$port" <<< '' 2>&1 | grep -q 'refused'; then
             echo "[*] Port $port is closed (connection refused)"
         else
-            echo "[*] Port $port status is unknown"
+            echo ""
         fi
     done
 }
